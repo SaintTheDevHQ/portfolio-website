@@ -6,7 +6,33 @@
 
 body {
   font-family: Poppins, sans-serif;
-  justify-content: center;
+}
+
+/* =========================
+   HEADER / NAVIGATION
+========================= */
+
+header {
+  padding: 20px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 24px;
+}
+
+.logo {
+  color: #6070ff;
+  text-decoration: none;
+  font-weight: 900;
 }
 
 .menu {
@@ -15,8 +41,33 @@ body {
   margin-right: 10px;
   display: none;
 }
+
+.nav-links {
+  display: none;
+  list-style: none;
+  gap: 32px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #344563;
+  display: block;
+}
+
+.nav-links.show {
+  display: flex;
+}
+
+/* =========================
+   HERO
+========================= */
+
 .hero {
-  padding: 120px 100px;
+  min-height: 100vh;
+  background-image: url("images/Header\ bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 120px 24px;
 }
 
 .hero-content {
@@ -40,8 +91,8 @@ body {
 }
 
 .hero h3 {
- color: #7f8cff;
- margin-bottom: 15px;
+  color: #7f8cff;
+  margin-bottom: 15px;
 }
 
 .social-icons {
@@ -54,61 +105,88 @@ body {
   color: #505f79;
 }
 
-header {
-  padding: 20px;
-}
+/* =========================
+   WORKS / PROJECTS
+========================= */
 
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: white;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 24px;
-  box-sizing: border-box;
-}
-
-.logo {
-  color: #6070ff;
-  text-decoration: none;
-  font-weight: 900;
-}
-
-.nav-links {
-  display: none;
-  list-style: none;
-  gap: 32px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #344563;
-  display: block;
-}
-
-.hero {
-  min-height: 100vh;
-  background-image: url("images/Header\ bg.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 120px 24px;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-}
-
-.nav-links.show {
-  display: flex;
-}
 .works {
   padding-top: 100px;
 }
+
+.project-card {
+  background: #fff;
+  border: 1px solid #dfe1e6;
+  border-radius: 16px;
+  padding: 16px;
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-content h2 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.project-content p {
+  margin-bottom: 16px;
+  line-height: 24px;
+}
+
+.project-info {
+  display: flex;
+  gap: 12px;
+  color: #6b778c;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  font-family: sans-serif;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.tags li {
+  background: #ebebff;
+  color: #6070ff;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.project-content button {
+  margin-top: 8px;
+  padding: 12px 16px;
+  border: 1px solid #6070ff;
+  background: white;
+  color: #6070ff;
+  border-radius: 8px;
+  width: fit-content;
+  cursor: pointer;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
 .about {
   padding: 24px;
   background: #fff;
@@ -122,11 +200,6 @@ nav {
   color: #172b4d;
 }
 
-.skills{
-  width: 100%;
-  margin-top: 30px;
-}
-
 .about p {
   line-height: 24px;
   color: #344563;
@@ -138,7 +211,40 @@ nav {
   margin-top: 20px;
 }
 
+.skills {
+  width: 100%;
+  margin-top: 30px;
+}
 
+.resume-btn {
+  border: 1px solid #6070ff;
+  background: white;
+  color: #6070ff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-top: 20px;
+  width: fit-content;
+  cursor: pointer;
+}
+
+/* =========================
+   SKILLS / LANGUAGES
+========================= */
+
+.skill-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #dfe1e6;
+}
+
+.languages {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
 
 .language-card {
   background: #f7f7f9;
@@ -150,76 +256,24 @@ nav {
   height: 120px;
 }
 
-.resume-btn{
-  border: 1px solid #6070ff;
-  background: white;
-  color: #6070ff;
-  padding: 12px 16px;
-  border-radius: 8px;
-  margin-top: 20px;
-  width: fit-content;
-  cursor: pointer;
-}
-.skill-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
-  border-bottom: 1px solid #dfe1e6;
+.skill-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
 }
 
-
-.languages{
+.accordion-content.card-grid {
   display: flex;
-  gap: 12px;
-  margin-top: 20px;
   flex-wrap: wrap;
- }
- 
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-@media screen and (min-width: 768px) {
-
-/* FORCED SIDE-BY-SIDE GRID */
-  .about-container {
-    display: grid !important; 
-    grid-template-columns: 1fr 1fr; /* Splits layout into 2 equal halves */
-    align-items: flex-start;
-    gap: 60px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .skill-icon {
-    width: 36px;
-    height: 36px;
-    object-fit: contain; /* Ensures the logos don't stretch or distort */
-}
-}
-
-.about-text-left,
-.skills-right{
+  gap: 12px;
+  margin-top: 15px;
+  margin-bottom: 24px;
   width: 100%;
 }
 
-  /* Mobile styles (375px and above) */
-/* Container for the cards to sit side-by-side inside their row */
-.accordion-content.card-grid {
-  display: flex;
-  flex-wrap: wrap; /* Allows cards to wrap to a new line if they run out of space */
-  gap: 12px;
-  margin-top: 15px;
-  margin-bottom: 24px; /* Creates spacing before the Frameworks item */
-  width: 100%; /* Forces the container to take full width */
-}
-
-/* Ensure the dropdown rows break onto a new line completely */
 .accordion-item {
   display: block;
-  width: 100%; 
+  width: 100%;
   clear: both;
 }
 
@@ -231,6 +285,11 @@ img {
   border-bottom: 1px solid #dfe1e6;
   width: 100%;
 }
+
+/* =========================
+   CONTACT
+========================= */
+
 .contact {
   background-image: url("images/contact\ form-\ background-shape-desktop.svg");
   background-size: cover;
@@ -279,84 +338,79 @@ img {
   background: white;
   cursor: pointer;
 }
+
+/* =========================
+   DESKTOP
+========================= */
+
 @media screen and (min-width: 768px) {
-.project-card {
-  background: #fff;
-  border: 1px solid #dfe1e6;
-  border-radius: 16px;
-  padding: 16px;
-  margin: 24px;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 40px;
- }
 
-.project-content {
-  max-width: 544px;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-.project-card img {
-  width: 60%;
-  border-radius: 8px;
-  width: 100%;
-  height: auto;
-  max-width: 544px;
-}
-
-
-  .reverse {
-    flex-direction: row-reverse;
-    align-items: flex-start;
+  .hero {
+    padding: 120px 100px;
   }
-}
+
+  .about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .about-text-left,
+  .skills-right {
+    width: 100%;
+  }
+
+  .project-card {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 24px;
+  }
+
+  .project-card img {
+    width: 50%;
+    max-width: 544px;
+  }
+
+  .project-content {
+    width: 50%;
+    max-width: 544px;
+    padding: 24px;
+    align-self: flex-start;
+  }
 
   .project-card.reverse {
-    align-items: flex-start;
+    flex-direction: row-reverse;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media screen and (max-width: 767px) {
+
+  .project-card {
+    flex-direction: column;
+    margin: 16px;
+    padding: 16px;
+    width: auto;
   }
 
-.project-content h2 {
-  font-size: 32px;
-  margin-bottom: 12px ;
-}
-.project-content p {
-  margin-bottom: 16px;
-  line-height: 24px;
-}
+  .project-card img {
+    width: 100%;
+    max-width: 100%;
+  }
 
-.project-info {
-  display: flex;
-  gap: 12px;
-  color: #6b778c;
-  margin-bottom: 16px;
-  flex-wrap: wrap;
-  font-family: sans-serif;
-}
+  .project-content {
+    width: 100%;
+    padding: 0;
+  }
 
-.tags {
-  display: flex;
-  gap: 8px;
-  list-style: none;
-  padding: 0;
-  margin-bottom: 20px;
-}
-
-.tags li {
-  background: #ebebff;
-  color: #6070ff;
-  padding: 4px 12px;
-  border-radius: 8px;
-}
-
-.project-content button {
-  margin-top: 16px;
-  padding: 12px 16px;
-  border: 1px solid #6070ff;
-  background: white;
-  color: #6070ff;
-  border-radius: 8px;
-  width: fit-content;
+  .project-card.reverse {
+    flex-direction: column;
+  }
 }
