@@ -39,7 +39,6 @@ nav {
   font-size: 24px;
   cursor: pointer;
   margin-right: 10px;
-  display: none;
 }
 
 .nav-links {
@@ -207,7 +206,7 @@ nav {
 }
 
 .about h3 {
-  color: #7f8cff;
+  color: #07070a;
   margin-top: 20px;
 }
 
@@ -245,6 +244,12 @@ nav {
   margin-top: 20px;
   flex-wrap: wrap;
 }
+
+.arrow {
+  font-size: 24px;
+  color: #344563;
+}
+
 
 .language-card {
   background: #f7f7f9;
@@ -348,6 +353,13 @@ nav {
   .hero {
     padding: 120px 100px;
   }
+    .menu {
+    display: none;
+  }
+
+  .project-card.reverse> {
+   margin-top: 56px;
+  }
 
   .about-container {
     display: grid;
@@ -384,6 +396,7 @@ nav {
 
   .project-card.reverse {
     flex-direction: row-reverse;
+    align-items: flex-start;
   }
 }
 
@@ -398,6 +411,10 @@ nav {
     margin: 16px;
     padding: 16px;
     width: auto;
+  }
+
+  .menu {
+    display: block;
   }
 
   .project-card img {
