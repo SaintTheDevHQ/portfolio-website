@@ -231,19 +231,23 @@
     I'd love to help with it!
   </p>
 
-  <form>
-    <input type="text" placeholder="Full Name" required>
+  <form action="https://formspree.io/f/xppaddjy" method="POST">
 
-    <input type="email" placeholder="Email Address" required>
+  <input type="text" name="name" placeholder="Full Name" required>
 
-    <textarea
-      placeholder="Write your message here..."
-      maxlength="500"
-      required>
-    </textarea>
+  <input type="email" name="email" placeholder="Email Address" required>
 
-    <button type="submit">Get in touch</button>
-  </form>
+  <textarea
+    name="message"
+    placeholder="Write your message here..."
+    maxlength="500"
+    required>
+  </textarea>
+
+<button type="submit">Get in touch</button>
+
+</form>
+
 </section>
 
 </body>
