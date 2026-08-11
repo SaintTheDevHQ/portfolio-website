@@ -357,6 +357,12 @@ nav {
     display: none;
   }
 
+  .nav-links {
+   display: flex;
+   list-style: none;
+   gap: 32px;
+  }
+
   .project-card.reverse> {
    margin-top: 56px;
   }
