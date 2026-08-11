@@ -182,6 +182,20 @@ nav {
   cursor: pointer;
 }
 
+.contact button,
+.resume-btn,
+.project-content button {
+  transition: all 0.3s ease;
+}
+
+.contact button:hover,
+.resume-btn:hover,
+.project-content button:hover {
+  background: #6070ff;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 /* =========================
    ABOUT
 ========================= */
@@ -386,6 +400,7 @@ nav {
     align-items: flex-start;
     gap: 40px;
     margin: 24px;
+    border: none;
   }
 
   .project-card img {
@@ -417,6 +432,7 @@ nav {
     margin: 16px;
     padding: 16px;
     width: auto;
+    border: none;
   }
 
   .menu {
@@ -437,3 +453,4 @@ nav {
     flex-direction: column;
   }
 }
+
