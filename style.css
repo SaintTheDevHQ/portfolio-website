@@ -454,21 +454,27 @@ nav {
   }
 }
 
-.project-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.project-card img {
+  transition: transform 0.3s ease;
 }
 
-.project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+.project-card img:hover {
+  transform: scale(1.03);
 }
 
-.btn {
+.contact button,
+.resume-btn,
+.project-content button {
   transition: all 0.3s ease;
 }
 
-.btn:hover {
+.contact button:hover,
+.resume-btn:hover,
+.project-content button:hover {
+  background: #6070ff;
+  color: white;
   transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .hero {
