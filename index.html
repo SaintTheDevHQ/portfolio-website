@@ -13,21 +13,25 @@
 
 <header>
   <nav class="navbar">
-    <a href="#" class="logo">My logo</a>
-    
-  <div class="menu">
-    ☰
-  </div>
+  <a href="#" class="logo">Abdullahi Abba</a>
+
+  <div class="menu">☰</div>
+
+  <div class="mobile-menu">
+    <button class="close-menu">×</button>
+
     <ul class="nav-links">
-      <li><a href="#">Portfolio</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#Home">Home</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-  </nav>
+  </div>
+</nav>
 
 </header>
 
-<section class="hero">
+<section class="hero" id="Home">
 <h1>
    I'm Abdullahi.<br>
    Glad to see you!
@@ -48,7 +52,7 @@
 </section>
 
  
-<section class="project-card">
+<section class="project-card" id="portfolio">
   <img src="images/Snapshoot Portfolio.png" alt="Tonic Project">
 
   <div class="project-content">
@@ -166,7 +170,7 @@
 </section>
  
 
-<section class="about">
+<section class="about" id="about">
   <div class="about-container">
     <div class="about-text-left">
     <h2>About Myself</h2>
@@ -223,7 +227,7 @@
             </div>
 </section>
 
-<section class="contact">
+<section class="contact" id="contact">
   <h2><b>Contact me</b></h2>
 
   <p>
@@ -250,6 +254,6 @@
 </form>
 
 </section>
-
+<script src="script.js"></script>
 </body>
 </html>
