@@ -196,6 +196,7 @@ nav {
   transform: translateY(-3px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+
 /* =========================
    ABOUT
 ========================= */
@@ -263,7 +264,6 @@ nav {
   font-size: 24px;
   color: #344563;
 }
-
 
 .language-card {
   background: #f7f7f9;
@@ -363,22 +363,22 @@ nav {
 ========================= */
 
 @media screen and (min-width: 768px) {
-
   .hero {
     padding: 120px 100px;
   }
-    .menu {
+
+  .menu {
     display: none;
   }
 
   .nav-links {
-   display: flex;
-   list-style: none;
-   gap: 32px;
+    display: flex;
+    list-style: none;
+    gap: 32px;
   }
 
   .project-card.reverse> {
-   margin-top: 56px;
+    margin-top: 56px;
   }
 
   .about-container {
@@ -426,13 +426,13 @@ nav {
 ========================= */
 
 @media screen and (max-width: 767px) {
-
   .project-card {
     flex-direction: column;
     margin: 16px;
     padding: 16px;
     width: auto;
     border: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
   .menu {
@@ -454,9 +454,6 @@ nav {
   }
 }
 
-.project-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
 .project-card:hover {
   transform: translateY(-8px);
