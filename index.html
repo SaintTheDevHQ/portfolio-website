@@ -13,21 +13,25 @@
 
 <header>
   <nav class="navbar">
-    <a href="#" class="logo">My logo</a>
-    
-  <div class="menu">
-    ☰
-  </div>
+  <a href="#" class="logo">Abdullahi Abba</a>
+
+  <div class="menu">☰</div>
+
+  <div class="mobile-menu">
+    <button class="close-menu">×</button>
+
     <ul class="nav-links">
-      <li><a href="#">Portfolio</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#Home">Home</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-  </nav>
+  </div>
+</nav>
 
 </header>
 
-<section class="hero">
+<section class="hero" id="Home">
 <h1>
    I'm Abdullahi.<br>
    Glad to see you!
@@ -48,125 +52,16 @@
 </section>
 
  
-<section class="project-card">
-  <img src="images/Snapshoot Portfolio.png" alt="Tonic Project">
+<div id="projects-container"></div>
 
-  <div class="project-content">
-    <h2>Tonic</h2>
-
-    <div class="project-info">
-      <span class="company">CANOPY</span>
-      <span>•</span>
-      <span>Back End Dev</span>
-      <span>•</span>
-      <span>2015</span>
-    </div>
-
-    <p>
-      A daily selection of privately personalized reads;
-      no accounts or sign-ups required.
-    </p>
-
-    <ul class="tags">
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-    </ul>
-
-    <button>See Project</button>
+<div class="modal" id="project-modal">
+  <div class="modal-content">
+    <button class="close-modal" type="button">&times;</button>
+    <div id="modal-body"></div>
   </div>
-</section>
+</div>
 
-<section class="project-card facebook-card">
-  <img src="images/multi.svg" alt="Multi-Post stories">
-
-  <div class="project-content">
-    <h2>Multi-Post stories</h2>
-
-    <div class="project-info">
-      <span class="company">FACEBOOK</span>
-      <span>•</span>
-      <span>Full Stack Dev</span>
-      <span>•</span>
-      <span>2015</span>
-    </div>
-
-    
-  <p>
-    Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.
-  </p>
-
-    <ul class="tags">
-      <li>html</li>
-      <li>Ruby on rails</li>
-      <li>css</li>
-      <li>javaScript</li>
-    </ul>
-
-    <button>See Project</button>
-  </div>
-</section>
-
-<section class="project-card">
-  <img src="images/facebook 360.png" alt="Facebook 360">
-
-  <div class="project-content">
-    <h2>Facebook 360</h2>
-
-    <div class="project-info">
-      <span class="company">FACEBOOK</span>
-      <span>•</span>
-      <span>Full Stack Dev</span>
-      <span>•</span>
-      <span>2015</span>
-    </div>
-
-    
-  <p>
-    Exploring the future of media in Facebook's first Virtual Reality app; a place to discover and enjoy 360 photos and videos on Gear VR.
-  </p>
-    <ul class="tags">
-      <li>html</li>
-      <li>Ruby on rails</li>
-      <li>css</li>
-      <li>javaScript</li>
-    </ul>
-
-    <button>See Project</button>
-  </div>
-</section>
- 
-<section class="project-card uber-card">
-  <img src="images/uber navigation.png" alt="Uber Navigation">
-
-  <div class="project-content">
-    <h2>Uber Navigation</h2>
-
-    <div class="project-info">
-      <span class="company"><strong>Uber</strong></span>
-      <span>•</span>
-      <span>Lead Developer</span>
-      <span>•</span>
-      <span>2018</span>
-    </div>
-
-    
-  <p>
-    A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.
-  </p>
-    <ul class="tags">
-      <li>html</li>
-      <li>Ruby on rails</li>
-      <li>css</li>
-      <li>javaScript</li>
-    </ul>
-
-    <button class="project-btn">See Project</button>
-  </div>
-</section>
- 
-
-<section class="about">
+<section class="about" id="about">
   <div class="about-container">
     <div class="about-text-left">
     <h2>About Myself</h2>
@@ -223,7 +118,7 @@
             </div>
 </section>
 
-<section class="contact">
+<section class="contact" id="contact">
   <h2><b>Contact me</b></h2>
 
   <p>
@@ -250,6 +145,6 @@
 </form>
 
 </section>
-
+<script src="script.js"></script>
 </body>
 </html>
