@@ -110,3 +110,23 @@ projectButtons.forEach((button, index) => {
 
   });
 });
+
+const contactForm = document.querySelector('.contact form');
+const emailInput = document.querySelector('input[name="email"]');
+
+const errorMessage = document.createElement('p');
+errorMessage.textContent = 'Please enter your email address in lowercase.';
+errorMessage.style.color = 'red';
+errorMessage.style.marginTop = '10px';
+errorMessage.style.display = 'none';
+
+contactForm.appendChild(errorMessage);
+
+contactForm.addEventListener('submit', (event) => {
+  if (emailInput.value !== emailInput.value.toLowerCase()) {
+    event.preventDefault();
+    errorMessage.style.display = 'block';
+  } else {
+    errorMessage.style.display = 'none';
+  }
+});
