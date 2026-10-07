@@ -130,3 +130,27 @@ contactForm.addEventListener('submit', (event) => {
     errorMessage.style.display = 'none';
   }
 });
+
+const form = document.querySelector('.contact form');
+
+const formData = {
+  name: '',
+  email: '',
+  message: '',
+};
+
+form.addEventListener('input', () => {
+  formData.name = form.querySelector('input[name="name"]').value;
+  formData.email = form.querySelector('input[name="email"]').value;
+  formData.message = form.querySelector('textarea[name="message"]').value;
+
+  localStorage.setItem('formData', JSON.stringify(formData));
+});
+
+const savedData = JSON.parse(localStorage.getItem('formData'));
+
+if (savedData) {
+  form.querySelector('input[name="name"]').value = savedData.name;
+  form.querySelector('input[name="email"]').value = savedData.email;
+  form.querySelector('textarea[name="message"]').value = savedData.message;
+}
