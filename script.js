@@ -154,3 +154,10 @@ if (savedData) {
   form.querySelector('input[name="email"]').value = savedData.email;
   form.querySelector('textarea[name="message"]').value = savedData.message;
 }
+
+const menu = document.querySelector('.menu');
+const navLinks = document.querySelector('.nav-links');
+
+menu.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+});
