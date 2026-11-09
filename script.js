@@ -159,3 +159,15 @@ const navLinks = document.querySelector('.nav-links');
 menu.addEventListener('click', () => {
   navLinks.classList.toggle('show');
 });
+const closeMenu = document.querySelector('#close-menu');
+
+closeMenu.addEventListener('click', () => {
+  navLinks.classList.remove('show');
+});
+const navItems = navLinks.querySelectorAll('a');
+
+navItems.forEach((item) => {
+  item.addEventListener('click', () => {
+    navLinks.classList.remove('show');
+  });
+});
