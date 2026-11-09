@@ -65,7 +65,7 @@ projectsContainer.innerHTML = projects.map((project) => `
       <p>${project.description}</p>
 
       <ul class="tags">
-        ${project.technologies.map((technology) => '<li>' + technology + '</li>').join('')}
+        ${project.technologies.map((technology) => `<li>${technology}</li>`).join('')}
       </ul>
 
       <button class="project-btn">See Project</button>
@@ -92,7 +92,7 @@ projectButtons.forEach((button, index) => {
   button.addEventListener('click', () => {
     modal.style.display = 'block';
 
-   modalBody.innerHTML = `
+    modalBody.innerHTML = `
   <img src="${projects[index].image}" alt="${projects[index].name}">
   <h2>${projects[index].name}</h2>
   <p>${projects[index].description}</p>
@@ -105,9 +105,7 @@ projectButtons.forEach((button, index) => {
     <a href="${projects[index].liveLink}" target="_blank">See Live</a>
     <a href="${projects[index].sourceLink}" target="_blank">See Source</a>
   </div>
-`;
-  
-
+   `;
   });
 });
 

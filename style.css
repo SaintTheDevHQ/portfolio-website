@@ -188,14 +188,17 @@ nav {
   transition: all 0.3s ease;
 }
 
-.contact button:hover,
-.resume-btn:hover,
-.project-content button:hover {
-  background: #6070ff;
-  color: white;
-  transform: translateY(-3px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+.resume-btn {
+  border: 1px solid #6070ff;
+  background: white;
+  color: #6070ff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-top: 20px;
+  width: fit-content;
+  cursor: pointer;
 }
+
 /* =========================
    ABOUT
 ========================= */
@@ -229,17 +232,6 @@ nav {
   margin-top: 30px;
 }
 
-.resume-btn {
-  border: 1px solid #6070ff;
-  background: white;
-  color: #6070ff;
-  padding: 12px 16px;
-  border-radius: 8px;
-  margin-top: 20px;
-  width: fit-content;
-  cursor: pointer;
-}
-
 /* =========================
    SKILLS / LANGUAGES
 ========================= */
@@ -263,7 +255,6 @@ nav {
   font-size: 24px;
   color: #344563;
 }
-
 
 .language-card {
   background: #f7f7f9;
@@ -308,7 +299,6 @@ nav {
 /* =========================
    CONTACT
 ========================= */
-
 .contact {
   background-image: url("images/contact\ form-\ background-shape-desktop.svg");
   background-size: cover;
@@ -358,27 +348,36 @@ nav {
   cursor: pointer;
 }
 
+.contact button:hover,
+.resume-btn:hover,
+.project-content button:hover {
+  background: #6070ff;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 /* =========================
    DESKTOP
 ========================= */
 
 @media screen and (min-width: 768px) {
-
   .hero {
     padding: 120px 100px;
   }
-    .menu {
+
+  .menu {
     display: none;
   }
 
   .nav-links {
-   display: flex;
-   list-style: none;
-   gap: 32px;
+    display: flex;
+    list-style: none;
+    gap: 32px;
   }
 
-  .project-card.reverse> {
-   margin-top: 56px;
+  .project-card.reverse > * {
+    margin-top: 56px;
   }
 
   .about-container {
@@ -426,7 +425,6 @@ nav {
 ========================= */
 
 @media screen and (max-width: 767px) {
-
   .project-card {
     flex-direction: column;
     margin: 16px;
