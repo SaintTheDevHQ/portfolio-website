@@ -87,7 +87,7 @@ nav {
 .profile-picture {
   width: 220px;
   height: 220px;
-  border-radius: 70%;
+  border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
 }
